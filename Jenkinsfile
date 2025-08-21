@@ -1,11 +1,12 @@
 pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                bat 'node app.js'
-            }
-        }
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building...'
+        powershell 'node -v'
+        powershell 'node app.js'
+      }
     }
+  }
 }
