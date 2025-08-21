@@ -4,8 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building...'
-        powershell 'node -v'
-        powershell 'node app.js'
+        echo 'Execution...'
       }
     }
   }
